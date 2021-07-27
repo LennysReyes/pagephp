@@ -1,0 +1,37 @@
+
+
+<?php/*
+
+if(empty($_POST["nombre"])):
+    header("Location:index.php?seccion=contacto&estado=error&campo=nombre");
+    die();
+endif;
+
+if(empty($_POST["apellido"])):
+    header("Location:index.php?seccion=contacto&estado=error&campo=apellido");
+    die();
+endif;
+
+if(strpos($_POST["email"],"@") === false || empty($_POST["email"])):
+    header("Location:index.php?seccion=contacto&estado=error&campo=email");
+    die();
+endif;
+
+if(strlen($_POST["comentario"]) > 10 || empty($_POST["comentario"])):
+    header("Location:index.php?seccion=contacto&estado=error&campo=comentario");
+    die();
+endif;
+
+ 
+header("Location:index.php?seccion=contacto&estado=ok");
+    die();
+   
+<!--*?php
+$nombre = isset($_POST['nombre']) ? $_POST['nombre'] : null;
+$apellido = isset($_POST['apellido']) ? $_POST['apellido'] : null;
+$email = isset($_POST['email']) ? $_POST['email'] : null;
+$comentario = isset($_POST['comentario']) ? $_POST['comentario'] : null;
+?>-->
+?>
+
+    
