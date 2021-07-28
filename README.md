@@ -1,5 +1,5 @@
 # pagephp
-It is a page that I create with php, html, css and bootstrap for the faculty.
+It is a page that I create with php, html, css and bootstrap for the College.
 * Use native PHP functions (require) and (include) for managing templates.
 * Verification of all data received by GET and POST from php.
 * Creating and use of functions.
