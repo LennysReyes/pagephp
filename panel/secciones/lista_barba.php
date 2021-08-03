@@ -7,6 +7,7 @@ if(!empty($_GET["estado"])):
         if(array_key_exists($error, $erroresBarba)):
 
 ?>
+<!--Alerta de errores-->
 <div class="alert alert-danger alert-dismissible fade show" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
@@ -21,6 +22,7 @@ if(!empty($_GET["estado"])):
         $ok = $_GET["ok"] ?? "";
             if(array_key_exists($ok, $okBarba)):
 ?>
+<!--Alerta de ok-->
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -41,15 +43,15 @@ if(!empty($_GET["estado"])):
 <?php
             endif;              
     endif;
-endif;
-  
+endif;  
 ?>
-
+<!--Template-->
 <div class="container my-5">
-    <h2 class="text-center text-white bg-dark" style="width: 18rem;"><strong>Tipos de Barba</strong></h2>
-      <table class="table table-dark">
+    <h1 class="text-center text-white" style="width: 18rem;"><strong>Tipos de Barba</strong></h1>
+      <div class="table-responsive">
+      <table id="shadow" class="table text-white">
  
-      <a href="index_panel.php?seccion=agregar_barba" class="btn btn-info  float-right my-1 ml-2 ">Agregar Barba</a>
+      <a href="index_panel.php?seccion=agregar_barba" class="btn btn-dark float-right my-1 ml-2 ">Agregar Barba</a>
     
           <thead>
             <tr>
@@ -78,21 +80,22 @@ $precio = file_get_contents("$carpetaBar/$barba/precio.txt");
       <td><?= ucfirst($barba); ?></td>
       <td><?= nl2br(file_get_contents("$carpetaBar/$barba/descripcion.txt")); ?></td>
       <td>$<?= calculaDescuento($precio);?></td>
-      <td><img id="imgpanel" width="200" height="200" src="<?= "$carpetaBar/$barba/$barba.jpg" ?>" alt="<?= $barba; ?>"></td>
+      <td><img width="200" height="200" src="<?= "$carpetaBar/$barba/$barba.jpg" ?>" alt="<?= $barba; ?>"></td>
       
       <td>
           <form action="eliminar_barba.php" method="post" class="eliminar_barba">
             <input type="hidden" name="barba" value="<?= $barba; ?>">
-            <button type="submit" class="btn btn-outline-info my-1">Eliminar Barbar </button>
+            <button type="submit" class="btn btn-outline-light my-1">Eliminar Barbar </button>
           </form>
 
-         <a href="index_panel.php?seccion=agregar_barba&barba=<?= $barba; ?>" class="btn btn-outline-info float-right my-1 ml-2 ">Editar Barba</a>   
+         <a href="index_panel.php?seccion=agregar_barba&barba=<?= $barba; ?>" class="btn btn-outline-light float-right my-1 ml-2 ">Editar Barba</a>   
       </td>
 </tr>  
  
 <?php  
   endwhile;
 ?>
+</div>
   </div>
     </tbody>
     </table>

@@ -3,6 +3,7 @@
 
 ini_set("upload_max_filesize","30M");
 
+//Datos obligatorios
 if(empty($_POST["nombre"]) || empty($_POST["descripcion"])):
     header("Location:index_panel.php?seccion=agregar_personal&estado=error&error=camposObligatoriosPersonal");                       
     die();
@@ -13,12 +14,13 @@ $descripcion = $_POST["descripcion"];
 $sueldo = $_POST["sueldo"];
 $anioIngreso = $_POST["anioIngreso"];
 
+// Veo si el personal esta  creada
 if(is_dir("../personal/$nombre")):
     header("Location:index_panel.php?seccion=agregar_personal&error&error=personal_existe");
     die();
 endif;
 
-
+// Si el personal no existe creo la carpeta
 mkdir("../personal/$nombre");
 
 

@@ -1,15 +1,14 @@
 <body>
-
-<main class="registro">
-    <div class="bg-login">
-        <div class="row justify-content-center">
-            <div class="col-6 mt-2">
-                <div class="card-body text-white bg-dark">
-                    <div class="col-auto">
-                        <div class="register_card">
-                            <div class="form_container">
+<!--Template-->
+<main>
+    <div class="row justify-content-center">
+        <div class="col-6 mt-2">
+            <div id="shadow" class="card-body text-white">
+                <div class="col-auto">
+                    <div class="register_card">
+                        <div class="form_container">
                                 <form class="form" action="registro.php" method="POST">
-                                    <div class="subtit">
+                                    <div class="subtit text-center">
                                         <h2> Registrarse </h2>
                                     </div>  
                                     <div  class="form-row">
@@ -38,9 +37,9 @@
                                             <input type="password" name="password" class="form-control input_pass" placeholder="password">
                                         </div>
                                     </div>
-                                    <div class="d-flex justify-content-center mt-3 login_container"></div>
-                                    <button type="submit" class="btn btn-block btn-secondary">Registrate</button>
-                                    <button type="submit" class="btn btn-block btn-secondary">Limpiar</button>
+                                    <div class="d-flex justify-content-center mt-3"></div>
+                                    <button type="submit" class="btn btn-block btn-dark">Registrate</button>
+                                    <button type="submit" class="btn btn-block btn-dark">Limpiar</button>
                                 </form>
                             </div>
                         </div>
@@ -48,7 +47,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </main>
 
 </body>

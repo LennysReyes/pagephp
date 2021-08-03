@@ -1,17 +1,16 @@
 
 <body>
-
+<!--Template-->
 <main>
-<div class="container">
     <div class="row justify-content-center">
         <div class="col-4 mt-2">
-            <div class="card-body text-white bg-dark">
+            <div id="shadow" class="card-body text-white">
                 <div class="row justify-content-center">
                     <div class="col-auto">
                         <div class="user_card">
                             <div class="form_container">
                                 <form class="form" action="login.php" method="post">
-                                    <div class="subtit">
+                                    <div class="subtit text-center">
                                         <h2> Iniciar sesion</h2>
                                     </div> 
                                     <div class="form-row">
@@ -36,12 +35,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mt-4">
-                                        <div class="d-flex justify-content-center links"> ¿No tenes usuario? <a href="index.php?seccion=registro" class="ml-2">Registrate</a></div>
-                                        <div class="d-flex justify-content-center mt-3 login_container"></div>
+                                    <div class="input-group mt-4">
+                                        <div class="d-flex justify-content-center links">
+                                            ¿No tenes usuario? <a href="index.php?seccion=registro" class="ml-2">Registrate</a>
+                                        </div>
+                                        <button type="submit" class="btn btn-block btn-dark">Ingresa</button>
+                                        <button type="submit" class="btn btn-block btn-dark">Limpiar</button>
                                     </div>
-                                    <button type="submit" class="btn btn-block btn-secondary">Ingresa</button>
-                                    <button type="submit" class="btn btn-block btn-secondary">Limpiar</button>
                                 </form>
                             </div>
                         </div>
@@ -50,7 +50,6 @@
             </div>
         </div>
     </div>
-</div>
 </main>
  
 

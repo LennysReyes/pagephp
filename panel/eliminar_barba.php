@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 if(empty($_POST["barba"])):
     header("Location:index_panel.php?estado=error&error=sin_barba");

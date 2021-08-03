@@ -1,5 +1,5 @@
 <?php
-
+//Recibe los datos del formulario 
 if(empty($_GET["nombre"])):
     header("Location:index.php?seccion=contacto&estado=error&campo=nombre");
     die();
@@ -15,11 +15,10 @@ if(strpos($_GET["email"],"@") === false || empty($_GET["email"])):
     die();
 endif;
 
-if(empty($_GET["comentario"])):
+if(empty($_GET["comentario"]) > 2000):
     header("Location:index.php?seccion=contacto&estado=error&campo=comentario");
     die();
 endif;
-
  
 header("Location:index.php?seccion=contacto&estado=ok");
     die();

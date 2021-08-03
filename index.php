@@ -18,9 +18,9 @@ include_once("confGlobal/funciones.php");
     <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Bootstrap CSS --> 
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/estilo.css">
   <link rel="stylesheet" href="css/normalize.css">
   <!-- <link rel="stylesheet" href="css/font-awesome.css"> --> 
   <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
@@ -34,12 +34,15 @@ include_once("confGlobal/funciones.php");
 
 <header>
 <!--barra de navegacion-->  
-  <nav class="navbar bg-dark navbar-expand-lg navbar-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
     </button>
 <!--menu sandwich-->        
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <a class="navbar-brand" href="index.php">
+      <img id="logo" src="img/bigote.png" alt="" width="30" height="24">
+    </a>
       <ul class="navbar-nav mr-auto">
           <?php
             foreach($navbar as $nombre => $url):
@@ -101,9 +104,10 @@ include_once("confGlobal/funciones.php");
 </nav>
       
        <!--carrusel-->  
-  <section>
+<section>
+  <div class="con">
     <div class="row justify-content-center">
-      <div class="co-12">
+      <div class="col-12">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -132,7 +136,8 @@ include_once("confGlobal/funciones.php");
         </div>
       </div>
     </div>
-  </section>
+  </div>  
+</section>
 </header>
 
 <?php
@@ -144,7 +149,7 @@ include_once("confGlobal/funciones.php");
            $error = $_GET["error"] ?? "";
                if(array_key_exists($error, $erroresLogin)):
 ?>
-
+<!--Mensajes de alerta-->
   <div class="alert alert-danger alert-dismissible fade show mb-0" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
@@ -159,7 +164,7 @@ include_once("confGlobal/funciones.php");
       $ok = $_GET["ok"] ?? "";
           if(array_key_exists($ok, $okLogin)):
 ?>
-
+<!--Mensajes de alerta-->
   <div class="alert alert-success alert-dismissible fade show" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
@@ -195,13 +200,21 @@ include_once("confGlobal/funciones.php");
     endif;
 
     ?>
-    </div> 
+    </div>
   </main>       
   
 <footer>
-  <div class="row mx-0 navbar bg-dark navbar-expand-lg navbar-dark">
+  <div class="row mx-0 navbar navbar-expand-lg">
     <div class="col-12 px-0">
       <h4 class="text-white text-center">Barber Shop</h4>
+      <div class="container d-flex justify-content-center">
+        <div class="social">
+          <a href="https://es-la.facebook.com/barbershop.com.ar/"><img src="img/social/facebook.png" alt="facebook"></a>
+          <a href="https://www.youtube.com/results?search_query=barber+shop"><img src="img/social/youtube.png" alt="youtube"></a>
+		      <a href="https://www.instagram.com/barbershop.com.ar/"><img src="img/social/instagram.png" alt="instagram"></a>
+          <small class="text-center">Copyright © Lennys Reyes</small>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
